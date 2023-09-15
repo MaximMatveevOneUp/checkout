@@ -805,7 +805,7 @@ class GitCommandManager {
     }
     tryClean() {
         return __awaiter(this, void 0, void 0, function* () {
-            const output = yield this.execGit(['clean', '-ffdx'], true);
+            const output = yield this.execGit(['clean', '-ffdx', '-e Library'], true);
             return output.exitCode === 0;
         });
     }
