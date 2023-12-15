@@ -425,7 +425,6 @@ class GitCommandManager {
 
   async tryClean(): Promise<boolean> {
     const args = ['clean', '-ffdx']
-    args.push('-e Library')
     const output = await this.execGit(args, false)
     return output.exitCode === 0
   }
